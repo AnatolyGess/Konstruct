@@ -57,3 +57,131 @@ ul {
   font-style: normal;
 }
 /* Font connection */
+.body {
+  font-family: OpenSans;
+  font-weight: 400;
+  color: #48555B;
+}
+
+.container {
+  max-width: 970px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header__welcome {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  background: url("../img/header/welcome.png") center/cover no-repeat;
+  color: #fff;
+}
+
+.header__title {
+  text-align: center;
+  font-family: BebasNeue;
+  font-size: calc(30px + 1.7021276596vw);
+  letter-spacing: 5.5px;
+}
+
+@media (min-width: 1440px) {
+  .header__title {
+    font-size: 60px;
+  }
+}
+.header__subtitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header__scroll {
+  margin-bottom: 70px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .header__content {
+    min-height: 65px;
+  }
+}
+.header__list {
+  display: flex;
+  column-gap: 48px;
+}
+
+@media (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__item {
+  min-height: 65px;
+}
+.header__item a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+.header__item a:hover {
+  color: #00A4E5;
+}
+
+.burger-btn {
+  display: none;
+  position: relative;
+  width: 29px;
+  height: 26px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+.burger-btn::before {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background-color: #48555B;
+  transition: all 0.3s ease 0s;
+}
+.burger-btn::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 3px;
+  top: 23px;
+  left: 0;
+  background-color: #48555B;
+  transition: all 0.3s ease 0s;
+}
+.burger-btn span {
+  position: absolute;
+  width: 29px;
+  height: 3px;
+  top: 11px;
+  left: 0;
+  background-color: #48555B;
+}
+
+@media (max-width: 767px) {
+  .burger-btn {
+    display: block;
+  }
+}
+hr {
+  height: 1px;
+  background-color: #E6E6E6;
+}
