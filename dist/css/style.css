@@ -70,9 +70,6 @@ ul {
 }
 
 .button--blue {
-  width: 150px;
-  height: 40px;
-  padding: 5px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -329,6 +326,11 @@ ul {
   background-color: #00A4E5;
 }
 
+.head__btn {
+  width: 150px;
+  height: 40px;
+}
+
 .head__subtitle {
   margin: 0 auto;
   max-width: 500px;
@@ -402,4 +404,52 @@ ul {
   margin-bottom: 35px;
 }
 
+.work__btn {
+  width: 150px;
+  height: 40px;
+}
+
 /* WORK */
+.contact {
+  background-color: #171819;
+  padding: 30px 15px;
+}
+
+.contact__container {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 685px;
+  margin: 0 auto;
+}
+.contact__container h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .contact__container {
+    flex-direction: column;
+    gap: 35px;
+  }
+}
+.contact__form {
+  display: flex;
+  max-width: 400px;
+}
+.contact__form input {
+  flex: 0 1 62.5%;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #979797;
+  border-right: none;
+}
+.contact__form button {
+  flex: 0 1 37.5%;
+  padding: 10px;
+}
