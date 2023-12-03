@@ -57,6 +57,10 @@ ul {
   font-style: normal;
 }
 /* Font connection */
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
   font-family: OpenSans;
   font-weight: 400;
@@ -452,4 +456,84 @@ ul {
 .contact__form button {
   flex: 0 1 37.5%;
   padding: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #141A20;
+  font-size: 13px;
+}
+
+.footer__content {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 15px;
+  max-width: 970px;
+  color: #fff;
+}
+.footer__content a {
+  color: #fff;
+}
+.footer__content a:hover {
+  text-decoration: underline;
+}
+
+.footer__company {
+  max-width: 250px;
+}
+
+.footer__title {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+}
+
+.footer__desc {
+  margin-top: 15px;
+}
+
+.footer__links-block {
+  display: flex;
+  column-gap: 35px;
+}
+
+.footer__links-list li:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.footer__contact {
+  max-width: 140px;
+}
+
+.footer__contact-list li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 20px;
+}
+
+.footer__social-item img {
+  max-width: 20px;
+  max-height: 20px;
+  filter: brightness(0) invert(1);
+}
+.footer__social-item img:hover {
+  filter: none;
+}
+
+.footer__copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+  min-height: 60px;
+  letter-spacing: 0.8px;
+  color: #fff;
+  background-color: #171819;
 }
