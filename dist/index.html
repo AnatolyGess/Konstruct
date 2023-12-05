@@ -8,7 +8,7 @@
 </head>
 
   <body class="body">
-    <header class="header">
+    <header class="header" id="home">
   <div class="header__welcome">
     <img
       class="header__logo"
@@ -24,23 +24,31 @@
     <p class="header__scroll">SCROLL DOWN</p>
   </div>
   <div class="header__navigation">
-    <div class="container">
-      <div class="header__content">
-        <img
-          src="img/header/konstruct-logo-black.svg"
-          alt="konstruct-logo-black"
-        />
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item"><a href="#!">HOME</a></li>
-            <li class="header__item"><a href="#!">ABOUT</a></li>
-            <li class="header__item"><a href="#!">SERVICES</a></li>
-            <li class="header__item"><a href="#!">WORK</a></li>
-            <li class="header__item"><a href="#!">CONTACT</a></li>
-          </ul>
-        </nav>
-        <button class="burger-btn" type="button"><span></span></button>
-      </div>
+    <div class="header__content">
+      <img
+        src="img/header/konstruct-logo-black.svg"
+        alt="konstruct-logo-black"
+      />
+      <nav class="header__nav menu">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#home">HOME</a>
+          </li>
+          <li class="header__item">
+            <a href="#about">ABOUT</a>
+          </li>
+          <li class="header__item">
+            <a href="#services">SERVICES</a>
+          </li>
+          <li class="header__item">
+            <a href="#work">WORK</a>
+          </li>
+          <li class="header__item">
+            <a href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="burger-btn" type="button"><span></span></button>
     </div>
   </div>
 </header>
@@ -48,45 +56,43 @@
 
     <main class="main">
       <section class="about" id="about">
-        <div class="container">
-          <div class="about__container">
-            <h2 class="about__title">OUR STORY</h2>
-            <div class="about__content">
-              <div class="about__text">
-                <div class="about__subtitle">
-                  Founded in 2011 by John Mathew Smith, Konstruct has become the
-                  number one construction management firm
-                </div>
-                <p class="about__description">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat. Lorem ipsum dolor sit amet, consectetuer
-                  adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                  laoreet dolore magna aliquam erat.
-                </p>
+        <div class="about__container">
+          <h2 class="about__title">OUR STORY</h2>
+          <div class="about__content">
+            <div class="about__text">
+              <div class="about__subtitle">
+                Founded in 2011 by John Mathew Smith, Konstruct has become the
+                number one construction management firm
               </div>
-              <div class="about__images gallery">
-                <div class="gallery__item">
-                  <img src="img/about/we_plan.png" alt="we_plan" />
-                  <h3>
-                    WE <br />
-                    PLAN
-                  </h3>
-                </div>
-                <div class="gallery__item">
-                  <img src="img/about/we_manage.png" alt="we_manage" />
-                  <h3>
-                    WE <br />
-                    MANAGE
-                  </h3>
-                </div>
-                <div class="gallery__item">
-                  <img src="img/about/we_build.png" alt="we_build" />
-                  <h3>
-                    WE <br />
-                    BUILD
-                  </h3>
-                </div>
+              <p class="about__description">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat. Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat.
+              </p>
+            </div>
+            <div class="about__images gallery">
+              <div class="gallery__item">
+                <img src="img/about/we_plan.png" alt="we_plan" />
+                <h3>
+                  WE <br />
+                  PLAN
+                </h3>
+              </div>
+              <div class="gallery__item">
+                <img src="img/about/we_manage.png" alt="we_manage" />
+                <h3>
+                  WE <br />
+                  MANAGE
+                </h3>
+              </div>
+              <div class="gallery__item">
+                <img src="img/about/we_build.png" alt="we_build" />
+                <h3>
+                  WE <br />
+                  BUILD
+                </h3>
               </div>
             </div>
           </div>

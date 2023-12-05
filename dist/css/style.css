@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img, picture, svg, video {
   display: block;
   max-width: 100%;
@@ -57,20 +61,13 @@ ul {
   font-style: normal;
 }
 /* Font connection */
-html {
-  scroll-behavior: smooth;
-}
-
 .body {
   font-family: OpenSans;
   font-weight: 400;
   color: #48555B;
 }
-
-.container {
-  max-width: 970px;
-  padding: 0 15px;
-  margin: 0 auto;
+.body.active-menu {
+  overflow-y: hidden;
 }
 
 .button--blue {
@@ -78,7 +75,7 @@ html {
   font-weight: 700;
   letter-spacing: 0.5px;
   background-color: #00A4E5;
-  color: #fff;
+  color: #FFFFFF;
   cursor: pointer;
   transition: transform 0.3s ease-in 0s;
 }
@@ -94,7 +91,7 @@ html {
   align-items: center;
   padding-top: 40px;
   background: url("../img/header/welcome.png") center/cover no-repeat;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .header__title {
@@ -102,16 +99,11 @@ html {
   font-family: BebasNeue;
   font-size: calc(30px + 1.7021276596vw);
   letter-spacing: 5.5px;
+  text-transform: uppercase;
 }
 
-@media (min-width: 1440px) {
-  .header__title {
-    font-size: 60px;
-  }
-}
 .header__subtitle {
   text-align: center;
-  font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -127,6 +119,9 @@ html {
 }
 
 .header__content {
+  margin: 0 auto;
+  max-width: 970px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,8 +138,9 @@ html {
 }
 
 @media (max-width: 767px) {
-  .header__nav {
-    display: none;
+  .header__list {
+    display: block;
+    padding-top: 150px;
   }
 }
 .header__item {
@@ -161,6 +157,18 @@ html {
   color: #00A4E5;
 }
 
+@media (max-width: 767px) {
+  .header__item {
+    border-bottom: 1px solid #E6E6E6;
+  }
+  .header__item:first-child {
+    border-top: 1px solid #E6E6E6;
+  }
+  .header__item a {
+    padding: 20px 0;
+    justify-content: center;
+  }
+}
 .burger-btn {
   display: none;
   position: relative;
@@ -197,14 +205,41 @@ html {
   left: 0;
   background-color: #48555B;
 }
+.burger-btn.active-menu span {
+  display: none;
+}
+.burger-btn.active-menu::before {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+.burger-btn.active-menu::after {
+  transform: rotate(45deg);
+  top: 10px;
+}
 
 @media (max-width: 767px) {
   .burger-btn {
     display: block;
   }
+  .header__nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 0.4s linear;
+    background-color: #FFFFFF;
+    z-index: 1;
+  }
+  .header__nav.active-menu {
+    transform: translateY(0);
+  }
 }
 .about__container {
-  padding: 50px 0;
+  max-width: 970px;
+  padding: 50px 15px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -219,12 +254,12 @@ html {
   text-transform: uppercase;
 }
 .about__title::after {
-  position: absolute;
   content: "";
-  width: 50px;
-  height: 2px;
+  position: absolute;
   top: 130%;
   left: 27%;
+  width: 50px;
+  height: 2px;
   background-color: #00A4E5;
 }
 
@@ -283,9 +318,9 @@ html {
   left: 10px;
   font-size: 26px;
   font-weight: 800;
-  letter-spacing: 0.2px;
+  letter-spacing: 1.2px;
   line-height: 1.2;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 /* ABOUT SECTION */
@@ -357,6 +392,11 @@ html {
   gap: 28px;
 }
 
+@media (max-width: 1023px) {
+  .capabilities {
+    flex-wrap: wrap;
+  }
+}
 .capabilities-card {
   flex: 0 1 33.333%;
   padding: 25px 20px;
@@ -380,9 +420,6 @@ html {
 }
 
 @media (max-width: 1023px) {
-  .capabilities {
-    flex-wrap: wrap;
-  }
   .capabilities-card {
     flex-grow: 1;
     max-width: 456px;
@@ -401,11 +438,11 @@ html {
 }
 
 .work__title {
+  margin-bottom: 35px;
   font-size: 30px;
   font-weight: 700;
-  line-height: 1.2;
   letter-spacing: 0.2px;
-  margin-bottom: 35px;
+  line-height: 1.2;
 }
 
 .work__btn {
@@ -431,7 +468,7 @@ html {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.8px;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
@@ -472,10 +509,10 @@ html {
   gap: 30px;
   padding: 40px 15px;
   max-width: 970px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__content a {
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__content a:hover {
   text-decoration: underline;
@@ -486,9 +523,9 @@ html {
 }
 
 .footer__title {
+  margin-bottom: 20px;
   font-size: 14px;
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
 }
 
 .footer__desc {
@@ -534,6 +571,6 @@ html {
   padding: 0 15px;
   min-height: 60px;
   letter-spacing: 0.8px;
-  color: #fff;
+  color: #FFFFFF;
   background-color: #171819;
 }
