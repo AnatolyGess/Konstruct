@@ -182,7 +182,7 @@ ul {
   min-height: 65px;
 }
 
-.header__item-link {
+.header__item a {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,7 +196,7 @@ ul {
   transition: all 0.3s ease 0s;
 }
 
-.header__item-link:hover {
+.header__item a:hover {
   color: #00A4E5;
 }
 
@@ -688,7 +688,7 @@ ul {
     padding-top: 150px;
   }
 
-  .header__item-link {
+  .header__item a {
     padding: 20px 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
