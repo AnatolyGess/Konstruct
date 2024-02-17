@@ -95,10 +95,10 @@ ul {
           transform: scale(0.9);
 }
 
-.no-webp .header__welcome {
+.no-webp .welcome {
   background: url("../img/header/welcome.png") center/cover no-repeat; }
 
-.header__welcome {
+.welcome {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,7 +117,7 @@ ul {
   color: #FFFFFF;
 }
 
-.header__title {
+.welcome__title {
   text-align: center;
   font-family: BebasNeue;
   font-size: calc(30px + 1.7021276596vw);
@@ -125,19 +125,19 @@ ul {
   text-transform: uppercase;
 }
 
-.header__subtitle {
+.welcome__subtitle {
   text-align: center;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.header__scroll {
+.welcome__scroll {
   margin-bottom: 70px;
   font-weight: 600;
   letter-spacing: 3.5px;
 }
 
-.header__navigation {
+.navigation {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -145,8 +145,9 @@ ul {
   border-bottom: 1px solid #E6E6E6;
 }
 
-.header__content {
+.navigation__content {
   margin: 0 auto;
+  min-height: 65px;
   max-width: 970px;
   padding: 0 15px;
   display: -webkit-box;
@@ -160,7 +161,7 @@ ul {
           align-items: center;
 }
 
-.header__list {
+.nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,20 +170,11 @@ ul {
           column-gap: 48px;
 }
 
-.header__item-close {
-  display: none;
-  font-weight: 600;
-}
-
-.header__item-close.active-menu {
-  display: block;
-}
-
-.header__item {
+.nav-list__item {
   min-height: 65px;
 }
 
-.header__item a {
+.nav-list__item a {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,68 +188,8 @@ ul {
   transition: all 0.3s ease 0s;
 }
 
-.header__item a:hover {
+.nav-list__item a:hover {
   color: #00A4E5;
-}
-
-.burger-btn {
-  display: none;
-  position: relative;
-  width: 29px;
-  height: 26px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.burger-btn::before {
-  content: "";
-  position: absolute;
-  width: 29px;
-  height: 3px;
-  top: 0;
-  left: 0;
-  background-color: #48555B;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.burger-btn::after {
-  content: "";
-  position: absolute;
-  width: 29px;
-  height: 3px;
-  top: 23px;
-  left: 0;
-  background-color: #48555B;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.burger-btn span {
-  position: absolute;
-  width: 29px;
-  height: 3px;
-  top: 11px;
-  left: 0;
-  background-color: #48555B;
-}
-
-.burger-btn.active-menu span {
-  display: none;
-}
-
-.burger-btn.active-menu::before {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 10px;
-}
-
-.burger-btn.active-menu::after {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 10px;
 }
 
 .about__container {
@@ -679,48 +611,8 @@ ul {
 }
 
 @media (max-width: 767px) {
-  .header__content {
-    min-height: 65px;
-  }
-
-  .header__list {
-    display: block;
-    padding-top: 150px;
-  }
-
-  .header__item a {
-    padding: 20px 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .burger-btn {
-    display: block;
-  }
-
-  .header__nav {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.4s linear;
-    transition: -webkit-transform 0.4s linear;
-    transition: transform 0.4s linear;
-    transition: transform 0.4s linear, -webkit-transform 0.4s linear;
-    background-color: #FFFFFF;
-    z-index: 1;
-  }
-
-  .header__nav.active-menu {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
-    width: 50%;
+  .nav-list {
+    display: none;
   }
 
   .about__content {
@@ -746,6 +638,6 @@ ul {
   }
 }
 
-.webp .header__welcome { background: url(../img/header/welcome.webp) center/cover no-repeat; }
+.webp .welcome { background: url(../img/header/welcome.webp) center/cover no-repeat; }
 
 .webp .work { background: url(../img/work/work-bg.webp) center/cover no-repeat; }
